@@ -10,10 +10,11 @@
 const btn = document.querySelector(".btn");
 
 btn.onclick = () => {
-  submitHandler();
+  submitHandler(event);
 };
 
 function submitHandler(event) {
+  event.preventDefault();
   const form = document.forms["userForm"];
 
   const userName = form.userName.value;
